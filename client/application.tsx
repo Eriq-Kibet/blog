@@ -1,11 +1,11 @@
 import React from 'react';
-import { Route, Switch, RouteChildrenProps } from 'react-router';
+import { Route, Routes, RouteChildrenProps } from 'react-router';
 import routes from './src/config/routes';
 export interface IApplcationProps { }
 
 const Application: React.FunctionComponent<IApplcationProps> = props => {
     return (
-        <Switch>
+        <Routes>
             {routes.map((route, index) => {
                 return (
                     <Route
@@ -16,7 +16,7 @@ const Application: React.FunctionComponent<IApplcationProps> = props => {
                     />
                 )
             })}
-        </Switch>
+        </Routes>
     )
 }
 export default Application
